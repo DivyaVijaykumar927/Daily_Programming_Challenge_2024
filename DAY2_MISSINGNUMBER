@@ -1,0 +1,31 @@
+#include <iostream>
+#include<vector>
+
+int findMissingNumber(vector <int>&arr ,int n)
+{
+ 
+
+int totalSum=(n*(n+1)/2);
+int arraySum=0;
+
+int arraySum=0;
+for(int num:arr)
+{
+arraySum+=num;
+}
+
+return totalSum-arraySum;
+
+}
+int main() {
+    // Example input
+    vector<int> arr = {1, 2, 4, 5};
+    int n = 5; // The array is taken from the range 1 to n (here n=5)
+
+    // Find and print the missing number
+    int missingNumber = findMissingNumber(arr, n);
+    cout << "Missing Number: " << missingNumber << endl;
+
+    return 0;
+}
+
